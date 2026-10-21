@@ -41,3 +41,35 @@ html[data-theme="dark"] .text-button{color:#ffb184}
 html[data-theme="dark"] .header-actions .text-button{color:var(--muted)}
 html[data-theme="dark"] dialog::backdrop{background:#030713b3}
 @media(max-width:760px){.header-actions{gap:7px}.header-actions .text-button{font-size:10px;padding:5px;min-height:40px}.header-actions .theme-toggle{min-width:36px;min-height:36px;padding:7px}.header-actions .avatar{height:36px;width:36px}header{padding:0 16px}.signed-out .auth-theme-toggle{top:16px;right:16px}.signed-out .auth-theme-toggle .theme-label{display:none}header>div:first-child{min-width:0}header .eyebrow{letter-spacing:.8px;font-size:8px}.location{font-size:11px}}
+/* Status uses both a label and color, with separate palettes for dark mode. */
+.professional-status,.availability-toggle{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:650;border-radius:8px;padding:7px 10px;line-height:1.4}
+.status-dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.professional-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.availability-available,.btn.availability-available{background:#e4f5eb;color:#17633d}
+.availability-inactive,.btn.availability-inactive{background:#edf0f5;color:#596476}
+.availability-busy,.btn.availability-busy{background:#fff0df;color:#9d4b0b}
+.badge.status-pending{background:#fff4d6;color:#805a00}
+.badge.status-assigned{background:#efe7ff;color:#6940a5}
+.badge.status-confirmed{background:#e5efff;color:#285ba1}
+.badge.status-progress{background:#fff0df;color:#9d4b0b}
+.badge.status-completed{background:#e4f5eb;color:#17633d}
+.badge.status-cancelled{background:#ffe7e8;color:#aa283c}
+.badge.status-unknown{background:#edf0f5;color:#596476}
+html[data-theme="dark"] .availability-available{background:#193e30;color:#92e0b5}
+html[data-theme="dark"] .availability-inactive{background:#2d3749;color:#c4ccda}
+html[data-theme="dark"] .availability-busy{background:#49301d;color:#ffc28a}
+html[data-theme="dark"] .badge.status-pending{background:#44391e;color:#f5d783}
+html[data-theme="dark"] .badge.status-assigned{background:#382950;color:#d4b3ff}
+html[data-theme="dark"] .badge.status-confirmed{background:#253b60;color:#b0ccff}
+html[data-theme="dark"] .badge.status-progress{background:#49301d;color:#ffc28a}
+html[data-theme="dark"] .badge.status-completed{background:#193e30;color:#92e0b5}
+html[data-theme="dark"] .badge.status-cancelled{background:#4d2530;color:#ffb0bd}
+html[data-theme="dark"] .badge.status-unknown{background:#2d3749;color:#c4ccda}
+/* 16px controls prevent the usual focus zoom on mobile Safari. Keep pinch zoom enabled. */
+@media(max-width:1024px),(pointer:coarse){
+ body .field input,body .field select,body .field textarea,body .search input,body input,body select,body textarea{font-size:16px;line-height:1.5}
+ .field input,.field select{min-height:46px;max-width:100%;min-width:0}
+ .field textarea{max-width:100%;min-width:0}
+ .professional-controls{gap:8px}
+ .professional-status,.availability-toggle{font-size:11px}
+}
