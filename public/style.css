@@ -73,3 +73,45 @@ html[data-theme="dark"] .badge.status-unknown{background:#2d3749;color:#c4ccda}
  .professional-controls{gap:8px}
  .professional-status,.availability-toggle{font-size:11px}
 }
+/* Brand assets and account onboarding */
+.logo-brand{display:inline-flex;align-items:center;justify-content:center;max-width:100%;background:#fff;border-radius:12px;padding:10px 12px;line-height:1}
+.logo-brand img{display:block;width:190px;height:auto;max-width:100%;object-fit:contain}
+#sidebar .logo-brand{padding:8px 0;border-radius:0;justify-content:flex-start}
+.auth-story .logo-brand{width:235px;align-self:flex-start;padding:14px 16px}
+.auth-story .logo-brand img{width:203px}
+.mobile-brand{display:none}
+.header-context{min-width:0}
+.auth-form.professional-registration{max-width:550px}
+.role-choices{display:grid;gap:16px;margin:25px 0}
+.role-choice{display:flex;flex-direction:column;gap:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:17px;padding:23px;text-align:left;transition:border-color .15s,transform .15s}
+.role-choice:hover{border-color:var(--orange);transform:translateY(-2px)}
+.role-symbol{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--surface-soft);color:var(--orange)}
+.role-choice strong{font-size:18px;letter-spacing:-.3px}
+.role-choice>span:not(.role-symbol){font-size:13px;line-height:1.7;color:var(--muted)}
+.role-choice b{font-size:12px;color:var(--accent-text);margin-top:3px}
+.nav-count{margin-left:auto;padding:2px 6px;min-width:20px;background:var(--orange);color:#fff;border-radius:7px;font-size:10px;text-align:center}
+.applications-summary{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:20px 0;background:var(--surface-soft)}
+.applications-summary h3{font-size:16px}.applications-summary p{font-size:12px;color:var(--muted);margin-bottom:0}
+.application-row{display:flex;align-items:center;gap:16px;margin-bottom:13px}.application-row h3{font-size:15px}.application-row p{font-size:12px;margin:6px 0;color:var(--muted)}.application-row small{font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+.application-info{flex:1;min-width:0}
+.application-self{max-width:850px;padding:32px;margin-top:28px}
+.application-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:25px;gap:15px}
+.application-symbol{display:grid;place-items:center;width:54px;height:54px;border-radius:15px;background:var(--surface-soft);color:var(--orange)}
+.application-self>p{color:var(--muted);font-size:14px;line-height:1.8}
+.application-facts{display:grid;grid-template-columns:2fr 2fr 1fr;gap:20px;border-block:1px solid var(--line);padding:22px 0;margin:24px 0}
+.application-facts span{display:block;font-size:11px;color:var(--muted);margin-bottom:9px}.application-facts strong{font-size:13px;line-height:1.6;overflow-wrap:anywhere}
+.application-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.review-feedback{background:var(--surface-soft);padding:18px;border-radius:12px;margin:18px 0;font-size:13px;overflow-wrap:anywhere}.review-feedback p{margin-bottom:0}
+html[data-theme="dark"] #sidebar .logo-brand{padding:10px 8px;border-radius:10px}
+html[data-theme="dark"] .role-choice b{color:#ffb184}
+@media(max-width:760px){
+ .mobile-brand{display:inline-flex;padding:8px 9px;border-radius:9px;max-width:132px}.mobile-brand img{width:114px}
+ .header-context>.eyebrow,.header-context>.location{display:none}
+ .auth-story{padding-top:24px}.auth-story .logo-brand{width:195px;padding:11px 12px}.auth-story .logo-brand img{width:171px}
+ .auth-story h1{font-size:31px}.auth-story p{margin-bottom:0}
+ .role-choice{padding:20px}.role-choice strong{font-size:17px}
+ .application-row{flex-wrap:wrap;gap:12px}.application-row .person{display:none}.application-row .btn{width:100%}
+ .application-self{padding:22px}.application-facts{grid-template-columns:1fr;gap:18px}.application-actions .btn{width:100%}
+ .applications-summary{flex-direction:column;align-items:flex-start}.applications-summary .btn{width:100%}
+ #mobileNav button{font-size:8px;min-width:0;overflow-wrap:anywhere;gap:5px}#mobileNav button .nav-count{margin:0}
+}
