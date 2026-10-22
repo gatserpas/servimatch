@@ -130,3 +130,26 @@ html[data-theme="dark"] .role-choice b{color:#ffb184}
 @media(max-width:480px){.premium-banner{padding:22px 18px}.premium-banner h2{font-size:22px}.premium-banner .btn{width:100%}.premium-benefit{gap:12px}}
 
 .service-people{display:flex;flex-wrap:wrap;gap:20px;margin:20px 0}.service-person{display:flex;align-items:center;gap:12px;min-width:0}.service-person strong{display:block;margin-top:5px;overflow-wrap:anywhere}.service-person .person{flex-shrink:0}
+
+.photo-open{display:block;width:100%;height:100%;border:0;padding:0;background:transparent;border-radius:50%;cursor:zoom-in}.photo-viewer{width:min(92vw,650px);max-width:92vw;max-height:90dvh;padding:48px 16px 16px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:20px}.photo-viewer::backdrop{background:#111827d9}.photo-viewer>img{display:block;width:100%;max-height:65dvh;object-fit:contain;border-radius:12px}.photo-viewer p{text-align:center;margin:12px 0 0}.photo-viewer-close{position:absolute;right:12px;top:8px}.card-brand{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px;margin:-4px 0 20px}#demoCardNumber{font-variant-numeric:tabular-nums;letter-spacing:1px}
+
+/* Consistent photo geometry in cards, the account button and the image viewer. */
+.person{width:48px;height:48px;min-width:48px;flex:0 0 48px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:1px solid var(--line)}
+.person:after{display:none}.avatar-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:inherit}
+.photo-open{display:block;line-height:0;width:100%;height:100%;border-radius:inherit;overflow:hidden}.photo-open:hover{filter:none}
+#account{padding:0;flex-shrink:0;display:grid;place-items:center}#account .avatar-photo{border-radius:50%}
+.profile-card>.pro-top>.person{width:76px;height:76px;min-width:76px;flex-basis:76px;font-size:23px;box-shadow:0 0 0 5px var(--bg)}
+.profile-card>.pro-top{gap:18px;margin:6px 0 22px}.profile-card>.pro-top h3{font-size:18px}.profile-card>.pro-top p{font-size:13px;overflow-wrap:anywhere}
+.photo-viewer{width:min(92vw,620px);max-height:90dvh;padding:0;border-radius:22px;background:var(--surface,#fff);box-shadow:0 24px 80px #0005;overflow:auto}
+.photo-viewer-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;border-bottom:1px solid var(--line)}
+.photo-viewer-heading h2{font-size:18px;margin:5px 0 0;overflow-wrap:anywhere}.photo-viewer-close{position:static;flex-shrink:0;display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:var(--bg);color:var(--ink);padding:0}
+.photo-viewer-stage{display:flex;align-items:center;justify-content:center;background:var(--bg);padding:20px;min-height:180px}
+.photo-viewer-stage>img{display:block;width:auto;height:auto;max-width:100%;max-height:60dvh;object-fit:contain;border-radius:12px;box-shadow:0 8px 28px #0001}
+.photo-viewer>p{font-size:12px;color:var(--muted);padding:14px 20px;margin:0}
+.checkout-heading{display:flex;align-items:center;gap:14px;margin:8px 0 22px}.checkout-heading h2{margin:5px 0 6px;font-size:26px}.checkout-heading .sub{margin:0;font-size:13px}
+.checkout-icon{display:grid;place-items:center;flex-shrink:0;width:48px;height:48px;background:#fff1e8;color:#c65a1b;border-radius:14px}
+.checkout-summary{padding:22px;border-radius:18px;background:var(--hero,#202953);color:#fff;margin-bottom:26px}.checkout-plan{display:flex;align-items:center;gap:12px}.checkout-plan strong{font-size:15px}.checkout-plan small{display:block;color:#d6daec;font-size:12px;margin-top:5px}.checkout-pill{margin-left:auto;background:#ffffff16;color:#ffbc8b;font-size:10px;letter-spacing:1px;font-weight:700;padding:6px 9px;border:1px solid #ffffff20;border-radius:7px}
+.checkout-total{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid #ffffff24;font-size:13px}.checkout-total strong{font-size:30px;white-space:nowrap}.checkout-total small{font-size:11px;color:#d6daec;font-weight:500}.checkout-summary>p{margin:10px 0 0;color:#d6daec;font-size:11px}
+.checkout-section{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.checkout-section h3{font-size:16px}.checkout-section>span{font-size:10px;color:var(--muted)}.checkout-hint{font-size:12px;color:var(--muted);line-height:1.6;margin:10px 0 20px}.checkout-form .field{font-size:12px}.checkout-form input{height:49px;border-radius:11px}.checkout-form .two{gap:14px}.checkout-submit{display:flex;align-items:center;justify-content:center;gap:9px;min-height:49px;margin-top:10px}.checkout-footnote{font-size:11px;line-height:1.6;text-align:center;color:var(--muted);margin:14px 0 0}
+html[data-theme="dark"] .checkout-icon{background:#3b2d26;color:#ffb181}
+@media(max-width:480px){.checkout-summary{padding:18px}.checkout-heading h2{font-size:23px}.checkout-plan{gap:9px}.checkout-plan strong{font-size:13px}.checkout-pill{font-size:9px;padding:5px 6px}.checkout-summary .premium-symbol{width:36px;height:36px}.photo-viewer-stage{padding:12px}.photo-viewer-heading{padding:16px}.profile-card>.pro-top>.person{width:64px;height:64px;min-width:64px;flex-basis:64px}}
