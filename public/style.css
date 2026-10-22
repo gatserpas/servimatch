@@ -115,3 +115,5 @@ html[data-theme="dark"] .role-choice b{color:#ffb184}
  .applications-summary{flex-direction:column;align-items:flex-start}.applications-summary .btn{width:100%}
  #mobileNav button{font-size:8px;min-width:0;overflow-wrap:anywhere;gap:5px}#mobileNav button .nav-count{margin:0}
 }
+
+.avatar-photo{width:100%;height:100%;object-fit:cover;border-radius:50%}.person{overflow:hidden}#account{overflow:hidden}.photo-picker{display:inline-flex;cursor:pointer;margin-top:16px}.premium-banner{background:#203e30;color:#f7fcf8;border:1px solid #547563;border-radius:22px;padding:26px;margin:26px 0}.premium-banner h2{color:inherit;margin:12px 0;font-size:26px}.premium-banner .eyebrow{color:#c8decd}.premium-price{font-size:42px;display:block;margin:18px 0}.premium-price small{font-size:18px;font-weight:400}.premium-banner .btn{background:#e7c66d;color:#172c21}.premium-benefits p{padding:12px 0;border-bottom:1px solid var(--border,#ddd);line-height:1.6}.premium-benefits b{font-size:18px}

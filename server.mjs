@@ -9,7 +9,7 @@ export function createAppServer({DB,adminSetupToken,publicOrigin}){
    const url=new URL(req.url,origin);
    if(url.pathname==='/health'){await DB.prepare('SELECT 1 AS ok').first();res.writeHead(200,{...security,'Content-Type':'application/json'});res.end('{"ok":true}');return}
    if(url.pathname.startsWith('/api/')){
-    let bytes=0;const chunks=[];for await(const chunk of req){bytes+=chunk.length;if(bytes>16000){res.writeHead(413,security);res.end();return}chunks.push(chunk)}
+    let bytes=0;const chunks=[];for await(const chunk of req){bytes+=chunk.length;if(bytes>(url.pathname==='/api/profile/photo'?180000:16000)){res.writeHead(413,security);res.end();return}chunks.push(chunk)}
     const headers=new Headers(req.headers);headers.delete('CF-Connecting-IP');
     const response=await handleApi(new Request(url,{method:req.method,headers,...(chunks.length?{body:Buffer.concat(chunks)}:{})}),{DB,ADMIN_SETUP_TOKEN:adminSetupToken});
     res.writeHead(response.status,{...security,...Object.fromEntries(response.headers)});res.end(Buffer.from(await response.arrayBuffer()));return;
