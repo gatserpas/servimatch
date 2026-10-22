@@ -1,1 +1,0 @@
-{"name":"servimatch-render-turso","version":"1.0.0","private":true,"type":"module","engines":{"node":">=24 <25"},"scripts":{"start":"node --env-file-if-exists=.env server.mjs","test":"node --test tests/*.test.mjs"},"dependencies":{"@noble/hashes":"2.4.0","@libsql/client":"^0.17.0"}}
